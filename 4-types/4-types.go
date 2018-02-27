@@ -29,4 +29,25 @@ func main() {
 
 	fmt.Println("My Address", street, zip, czechRepublic)
 
+	i := 27
+	f := 2.8929
+	u := uint(9310)
+
+	fmt.Println(i, f, u)
+	fmt.Println(i, float64(f), uint(float64(f)))
+
+	var fl float64
+
+	fl = float64(i)
+	fmt.Println(fl)
+
+	var (
+		eI int
+		eF float32
+		eB bool
+		eS string = "ahoj"
+	)
+
+	fmt.Println(eI, eF, eB, eS, len(eS))
+
 }
