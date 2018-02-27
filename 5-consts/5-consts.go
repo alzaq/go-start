@@ -27,7 +27,7 @@ func needFloat(x float64) (value float64) {
 }
 
 func main() {
-	fmt.Println("--- 5 CONTS ---")
+	fmt.Println("--- 5 CONSTS ---")
 
 	var msg string
 	msg = fmt.Sprintf("PI is about %g!", PI)
