@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-	fmt.Println("--- 3 TYPES ---")
+	fmt.Println("--- 4 TYPES ---")
 
 	male = false
 	name = "Ales"
