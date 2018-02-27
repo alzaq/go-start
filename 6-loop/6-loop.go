@@ -42,6 +42,19 @@ func main() {
 
 	fmt.Println(fmt.Sprintf("%s: %s", "A", "Ahoj!"))
 	fmt.Println(fmt.Sprintf("%s: %s", "B", hello(time.Now())))
+
+	for i := 0; i < 3; i += 1 {
+		fmt.Println()
+	}
+
+	tryDefer()
+
+	for i := 0; i < 3; i += 1 {
+		fmt.Println()
+	}
+
+	lifo()
+
 }
 
 func sqrt(x float64) float64 {
@@ -75,6 +88,22 @@ func login(id int) (name string, age int) {
 		age = -1
 	}
 	return
+}
+
+func tryDefer() {
+	defer fmt.Println("Finished!")
+	fmt.Println("Prvni")
+	fmt.Println("Druhy")
+	fmt.Println("Treti")
+}
+
+func lifo() {
+	fmt.Println("Start")
+	for i := 0; i < 10; {
+		i += 1
+		defer fmt.Println(fmt.Sprintf("I'm %d!", i))
+	}
+	fmt.Println("Finished")
 }
 
 func hello(time time.Time) (answer string) {
